@@ -1,137 +1,33 @@
-<nav>
-    <ul>
-      <li><a href="tabela1.html">Tabela 1 </a></li>
-      <li><a href="tabela2.html">Tabela 2 </a></li>
-      <li><a href="tabela3.html">Tabela 3 </a></li>
-      <li><a href="tabela4.html">Tabela 4 </a></li>
-      <li><a href="tabela4.html">Tabela 7 </a></li>
-    </ul>
-</nav>
-<style>
-    /* Start General */
-* {
-  margin:0;
-  padding:0;
-  font-family: Tahoma;
-  box-sizing:border-box;
-  -o-box-sizing:border-box;
-  -ms-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-}
-body{
-  background-color: #CCC;
-}
-nav ul li a {
-  color: #FFF;
-  text-decoration: none;
-}
-/* End General */
-
-/* Start Navbar */
-nav ul {
-  background-color: #bf0000;
-}
-nav ul > li {
-  padding: 15px;
-  display: inline-block;
-  transition: all .3s ease;
-  margin-left: -5px
-}
-nav ul > li:not(:last-of-type):hover {
-  background-color: #222
-}
-nav ul > li:first-of-type {
-  background-color: #222
-}
-nav ul > li:last-of-type {
-  float: right;
-}
-nav ul > li:last-of-type a .fa {
-  font-size: 21px
-}
-/* End Navbar */
-
-/* Start Menue Right */
-nav ul > li:last-of-type {
-  position: relative;
-  display: none
-}
-nav ul > ol {
-  position: absolute;
-  top: 49px;
-  right: 0;
-  background: #333;
-  text-align: center;
-  list-style: none;
-  display: none
-}
-nav ul > ol > li {
-  width: 100vw;
-  color: #FFF;
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition: all .3s ease;
-}
-nav ul > ol > li:hover a {
-  margin: 20px;
-}
-nav ul > ol > li:hover {
-  background: #000;
-  cursor: pointer
-}
-nav ul input {
-  opacity: .7;
-  padding: 5px;
-  flot: right;
-  display: none
-}
-/* Start Menue Right */
-
-/* Start Media Query */
-@media screen and (max-width:680px){
-  nav ul > li:not(:first-child) {
-    display:none
-  }
-  nav ul > li:last-of-type {
-    display: block
-  }
-  nav ul input {
-    display: inline
-  }
-}
-@media screen and (min-width:680px) {
-  nav ul > ol > li {
-    display:none
-  }
-}
-/* End Media Query */
-</style>
-<script>
-    $(function() {
-  var ulLi = $('nav ul > li'),
-      fa = $('nav ul > li:last-of-type a .fa');
-  
-   $('nav ul').append('<ol></ol>');
-  
-   $('nav').each(function() {
-     for (var i=0; i <= ulLi.length - 3; i++) {
-       $('nav ul > ol').append("<li>"+ i +"</li>");
-       $('nav ul > ol > li').eq(i).html(ulLi.eq(i+1).html());
-     }
-  });
-
-  $('nav ul > li:last-of-type').on('click', function() {
-    fa.toggleClass('fa-bars');
-    fa.toggleClass('fa-times');
-    $(this).parent().children('ol').slideToggle(500);
-  });
-});
-
-// Em An
-// 10/10/2016
-// https://codepen.io/anon/pen/qaoxyA  
-// https://codepen.io/Em-An/pen/LRdjwp
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="key-words" content="better, call, saul, lawyer">
+        <meta name="author" content="Pedro Lucas de Moura">
+        <meta name="reply-to" content="pedro.lm@estudante.iftm.edu.br">
+        <meta name="generator" content="WebStorm">
+        <title>É melhor chamar o Saulo</title>
+        <link rel="stylesheet" href="./plokplok.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><img id="logo" src="https://cdn.discordapp.com/attachments/951142119114952744/1009599599213822063/saulo.png"alt="saulo bom homem"></li>
+                <li><a href="index.html">PRINCIPAL</a></li>
+                <li><a href="servicos.html">SERVIÇOS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+                <li><a href="somos.html">QUEM SOMOS</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>Saulo Bomhomem</h2>
+                <p>
+                    Se você está com alguns problemas legais e as sirenes estão ligando, então é melhor chamar o Saulo.
+                    Saulo Bomhomem é o melhor advogado do Meio leste, ele vai defender os seus direitos como nunca foram defendidos
+                </p>
+            </article>
+        </section>
+    </body>
+</html>
